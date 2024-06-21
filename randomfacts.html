@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Facts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <h2>Random Facts About Renzehl</h2>
+        </div>
+        <div class="random-facts-container">
+            <div class="fact-container" id="fact1">
+            </div>
+            <div class="fact-container" id="fact2">
+            </div>
+            <div class="fact-container" id="fact3">
+            </div>
+            <button class="random-facts-button" onclick="generateRandomFacts()">Click here for more random facts!</button>
+        </div>
+        <a href="profile.html" class="rose-button">Go to Home</a>
+    </div>
+    </div>
+
+    <script>
+        function generateRandomFacts() {
+            var facts = [
+                "Renzehl's favorite food is carbonara",
+                "Renzehl's favorite color is pink",
+                "Renzehl's cat is named Kuring",
+                "Renzehl loves to dance",
+                "Renzehl doesn't like seafood especially shrimps",
+                "Renzehl wants to be a Certified Public Accountant someday",
+                "Renzehl's favorite song is White Horse by Talor Swift",
+                "Renzehl's favorite book is Salamisim and Bride of Alfonso by UndeniablyGorgeous",
+                "Renzehl loves rainy/wet season",
+                "Renzehl's pet peeve is someone who chew their food loudly",
+                "Renzehl loves coffee",
+                "Renzehl's dream destination are Switzerland and Korea"
+            ];
+
+            function getRandomFact(){
+                return facts[Math.floor(Math.random() * facts.length)];
+            }
+            document.getElementById('fact1').innerHTML = '<h3>Fact 1</h3><p>' + getRandomFact() + '</p>';
+            document.getElementById('fact2').innerHTML = '<h3>Fact 2</h3><p>' + getRandomFact() + '</p>';
+            document.getElementById('fact3').innerHTML = '<h3>Fact 3</h3><p>' + getRandomFact() + '</p>';
+        }
+        generateRandomFacts(); // 
+    </script>
+
+</body>
+</html>
